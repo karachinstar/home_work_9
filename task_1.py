@@ -33,7 +33,7 @@ print(f'{result / 1000} тонн')
 class NonNull:
     def __set__(self, instance, value):
         if value == '':
-            raise ValueError("Не введено значение")
+            raise ValueError("Введено не значение")
         instance.__dict__[self.my_attr] = value
 
     def __set_name__(self, owner, my_attr):
@@ -55,5 +55,5 @@ class Worker:
                f' премия = {self.bonus}'
 
 
-worker = Worker('Петр', 'Иванов', 1000, 100)
+worker = Worker('Олег', 'Шилов', 3000, 200)
 print(worker)
