@@ -4,7 +4,7 @@ class NonString:
         try:
             int(value)
         except ValueError:
-            raise ValueError("Не может строкой")
+            raise ValueError("Не может быть строкой")
         instance.__dict__[self.my_attr] = value
 
     def __set_name__(self, owner, my_attr):
